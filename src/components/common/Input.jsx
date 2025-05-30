@@ -32,7 +32,7 @@ export const Input = ({
     return (
         <View style={{ ...GlobalStyles.flex, ...styles.inputContainer, ...containerStyle }}>
             {renderFrontIcon(front)}
-            <TextInput
+            <TextInput   
                 value={value}
                 onChangeText={onChangeText}
                 placeholder={placeholder}

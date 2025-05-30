@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
-import { Template } from '../../components/layout/Template';
-import { BackBtn } from '../../components/layout/Back';
-import { WelcomeWord } from '../../components/layout/welcomeWord';
-import { Input } from '../../components/layout/Input';
-import { WelcomeTxt } from '../../components/layout/WelcomeTxt';
-import { WelcomeBtn } from '../../components/layout/WelcomeBtn';
+import { Template } from '../../components/common/Template';
+import { BackBtn } from '../../components/common/Back';
+import { WelcomeWord } from '../../components/common/welcomeWord';
+import { Input } from '../../components/common/Input';
+import { WelcomeTxt } from '../../components/common/WelcomeTxt';
+import { WelcomeBtn } from '../../components/common/WelcomeBtn';
 
 export const Forgot = ({ navigation }) => {
     return (

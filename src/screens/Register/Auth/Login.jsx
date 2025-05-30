@@ -2,12 +2,12 @@ import React from 'react';
 
 import { View } from 'react-native';
 
-import { Template } from '../../../components/layout/Template';
-import { BackBtn } from '../../../components/layout/Back';
-import { WelcomeWord } from '../../../components/layout/welcomeWord';
-import { WelcomeTxt } from '../../../components/layout/WelcomeTxt';
-import { WelcomeBtn } from '../../../components/layout/WelcomeBtn';
-import { NrInput } from '../../../components/layout/Nrinput';
+import { Template } from '../../../components/common/Template';
+import { BackBtn } from '../../../components/common/Back';
+import { WelcomeWord } from '../../../components/common/welcomeWord';
+import { WelcomeTxt } from '../../../components/common/WelcomeTxt';
+import { WelcomeBtn } from '../../../components/common/WelcomeBtn';
+import { NrInput } from '../../../components/common/Nrinput';
 import { GlobalStyles } from '../../../components/styles';
 
 export const LoginAuth = ({ navigation }) => {
@@ -32,7 +32,7 @@ export const LoginAuth = ({ navigation }) => {
             </View>
             <WelcomeBtn
                 content={'Continue'}
-                action={'LoginAuth'}
+                action={'Dashboard'}
                 navigation={navigation}
             />
         </>
