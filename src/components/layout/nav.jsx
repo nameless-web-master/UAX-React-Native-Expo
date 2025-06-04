@@ -62,7 +62,7 @@ export const Nav = ({ navigation, place }) => {
                 backgroundColor: '#321C3F',
                 paddingVertical: 26,
                 paddingHorizontal: 32,
-                margin: -16,
+                marginHorizontal: -16,
             }}>
             {
                 datas.map((_itm, _idx) => (

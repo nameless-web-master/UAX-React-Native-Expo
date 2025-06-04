@@ -3,6 +3,7 @@ import React from "react";
 import { TouchableOpacity, Text } from "react-native";
 import AntDesign from '@expo/vector-icons/AntDesign';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 import { GlobalStyles } from "../styles";
 export const Button = ({ content, action, navigation, style, other }) => {
@@ -11,7 +12,7 @@ export const Button = ({ content, action, navigation, style, other }) => {
         <TouchableOpacity
             style={{
                 ...GlobalStyles.flexCenter,
-                paddingVertical: 8,
+                paddingVertical: 10,
                 paddingHorizontal: 14,
                 borderRadius: 5,
                 ...style
@@ -25,12 +26,21 @@ export const Button = ({ content, action, navigation, style, other }) => {
             {
                 content.icon ?
                     (other ?
-                        <MaterialCommunityIcons
-                            name={content.icon}
-                            size={14}
-                            color="white"
-                            style={{ marginRight: 4 }}
-                        /> :
+                        (
+                            other === 1 ?
+                                <MaterialCommunityIcons
+                                    name={content.icon}
+                                    size={14}
+                                    color="white"
+                                    style={{ marginRight: 4 }}
+                                /> :
+                                <MaterialIcons
+                                    name={content.icon}
+                                    size={14}
+                                    color="white"
+                                    style={{ marginRight: 8 }}
+                                />
+                        ) :
                         <AntDesign
                             name={content.icon}
                             size={14}
@@ -42,7 +52,7 @@ export const Button = ({ content, action, navigation, style, other }) => {
             }
             <Text style={{
                 ...GlobalStyles.minTitle,
-                fontSize: 14
+                fontSize: 13
             }}>{content.txt}</Text>
         </TouchableOpacity>
     );

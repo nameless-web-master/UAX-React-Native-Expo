@@ -17,6 +17,13 @@ import { ForgotAuth } from '../screens/Register/Auth/ForgotAuth';
 
 import { Dashboard } from '../screens/main/Dashboard';
 import { NFTs } from '../screens/main/NFTs';
+import { Swap } from '../screens/main/Swap';
+
+// Send & Receive
+
+import { Send } from '../screens/main/Dashboard/components/send';
+import { Receive } from '../screens/main/Dashboard/components/receive';
+import { Transfer } from '../screens/main/Dashboard/components/send/Transfer';
 
 const Stack = createNativeStackNavigator();
 
@@ -38,6 +45,14 @@ export default function Navigator() {
                 {/* Main */}
                 <Stack.Screen name="Dashboard" component={Dashboard} />
                 <Stack.Screen name="NFTs" component={NFTs} />
+                <Stack.Screen name="Swap" component={Swap} />
+
+
+                {/* Send & Receive  */}
+                <Stack.Screen name="Send" component={Send} />
+                <Stack.Screen name="Receive" component={Receive} />
+                <Stack.Screen name="Transfer" component={Transfer} />
+
             </Stack.Navigator>
         </NavigationContainer>
     );

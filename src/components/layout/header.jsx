@@ -23,7 +23,7 @@ export const Header = ({ content, logo, right, menu, navigation }) => {
                         style={{ width: 50, height: 14 }}
                     /> :
                     <IconBtn
-                        path={'Home'}
+                        path={'Dashboard'}
                         navigation={navigation}
                         icon={"keyboard-arrow-left"}
                     />

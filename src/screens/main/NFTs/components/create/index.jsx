@@ -34,7 +34,7 @@ export const CreateNFT = ({ state, setState, setComplete }) => {
                         paddingHorizontal: 16,
                         width: '100%',
                         position: 'absolute',
-                        top: 22
+                        top: 32
                     }}
                 >
                     <IconBtn
@@ -212,7 +212,7 @@ export const CreateNFT = ({ state, setState, setComplete }) => {
                     }}>
                         <MainBtn
                             content={{ txt: 'Buy Now', icon: 'cart-arrow-down' }}
-                            other={true}
+                            other={1}
                             action={() => setComplete(state)}
                         />
                     </View>
@@ -228,7 +228,7 @@ export const CreateNFT = ({ state, setState, setComplete }) => {
                                 backgroundColor: '#DF16FF',
                                 borderColor: 'transparent'
                             }}
-                            other={true}
+                            other={1}
                             action={() => setComplete(state)}
                         />
                     </View>

@@ -1,19 +1,19 @@
 import React from 'react';
 
-import { Template } from '../../components/layout/Template';
+import { Template } from '../../../components/layout/Template';
 import { View, Image, Text, ScrollView } from 'react-native';
 
-import { Header } from '../../components/layout/header';
-import { UserInfo } from '../../components/layout/userInfo';
-import Balance from '../../assets/circle.png'
-import { GlobalStyles } from '../../components/styles';
-import { MainBtn } from '../../components/layout/mainBtn';
-import { Nav } from '../../components/layout/nav';
+import { Header } from '../../../components/layout/header';
+import { UserInfo } from '../../../components/layout/userInfo';
+import Balance from '../../../assets/circle.png'
+import { GlobalStyles } from '../../../components/styles';
+import { MainBtn } from '../../../components/layout/mainBtn';
+import { Nav } from '../../../components/layout/nav';
 
-import Claim from '../../assets/claim.png';
-import { Transaction } from '../../components/layout/transaction';
+import Claim from '../../../assets/claim.png';
+import { Transaction } from './components/transaction';
 
-import { Link } from '../../components/layout/link';
+import { Link } from '../../../components/layout/link';
 
 export const Dashboard = ({ navigation }) => {
     const children = (
@@ -48,11 +48,13 @@ export const Dashboard = ({ navigation }) => {
                     marginVertical: 24
                 }}>
                     <MainBtn
-                        content={{ txt: "Send", icon: "upload" }} action="Dashboard"
+                        content={{ txt: "Send", icon: "upload" }}
+                        action="Send"
                         navigation={navigation}
                     />
                     <MainBtn
-                        content={{ txt: "Receive", icon: "download" }} action="Dashboard"
+                        content={{ txt: "Receive", icon: "download" }}
+                        action="Receive"
                         navigation={navigation}
                     />
                 </View>
@@ -86,6 +88,7 @@ export const Dashboard = ({ navigation }) => {
             children={children}
             style={{
                 padding: 16,
+                paddingVertical: 0
             }}
         />
     )

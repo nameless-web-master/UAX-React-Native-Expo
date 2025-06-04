@@ -3,9 +3,9 @@ import { View, Text, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as FileSystem from 'expo-file-system';
 
-import { LinearGradient } from "expo-linear-gradient";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { GlobalStyles } from '../../../../components/styles';
+import { LinearMainBox } from '../../../../components/layout/linearMainBox';
 
 
 const UploadBtn = () => {
@@ -47,14 +47,12 @@ const UploadBtn = () => {
     };
 
     return (
-        <LinearGradient
-            colors={['#2C2430', '#2218260F']}
+        <LinearMainBox
             style={{
                 ...styles.uploadButton,
                 marginVertical: 28
             }}
-        >
-            <View style={styles.container}>
+            children={<View style={styles.container}>
                 <TouchableOpacity
                     onPress={pickFile}
                     style={{ ...GlobalStyles.flex, flexDirection: 'column' }}
@@ -79,8 +77,8 @@ const UploadBtn = () => {
                         {selectedFile.name} • {selectedFile.size}
                     </Text>
                 )}
-            </View>
-        </LinearGradient>
+            </View>}
+        />
     );
 };
 

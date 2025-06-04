@@ -74,7 +74,8 @@ export const NFTs = ({ navigation }) => {
 
             }
             style={{
-                padding: 16
+                padding: 16,
+                paddingVertical: 0
             }}
         />
     )

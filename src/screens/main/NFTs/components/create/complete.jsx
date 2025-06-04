@@ -12,10 +12,12 @@ export const Complete = ({ state, setState }) => {
     const data = filter(state);
     return (
         <ScrollView>
-            <IconBtn
-                icon={'keyboard-arrow-left'}
-                path={() => setState(null)}
-            />
+            <View style={{paddingTop: 16}}>
+                <IconBtn
+                    icon={'keyboard-arrow-left'}
+                    path={() => setState(null)}
+                />
+            </View>
             <View style={{ padding: 34 }}>
                 <LinearGradient
                     colors={['#DE20FD', '#8B1B9D']}
@@ -123,7 +125,6 @@ export const Complete = ({ state, setState }) => {
                         backgroundColor: '#DF16FF',
                         borderColor: 'transparent'
                     }}
-                    other={true}
                     action={() => setState(null)} />
             </View>
         </ScrollView>

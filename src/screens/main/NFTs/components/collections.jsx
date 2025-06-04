@@ -17,6 +17,7 @@ import image6 from '../../../../assets/collections/6.png';
 
 
 import { NoData } from "../../../../components/common/noData";
+import { LinearMainBox } from "../../../../components/layout/linearMainBox";
 
 const datas = [
     {
@@ -116,20 +117,16 @@ export const Collections = () => {
                                 </View>
                             </View>
                         )) :
-                        <LinearGradient
-                            colors={['#2C2430', '#2218260F']}
+                        <LinearMainBox
                             style={{
                                 ...GlobalStyles.flexCenter,
                                 flexDirection: 'row !important',
                                 width: '100%',
                                 height: 220,
-                                borderWidth: 1,
-                                borderColor: '#FFFFFF12',
                                 borderRadius: 10
                             }}
-                        >
-                            <NoData type={'Collections'} />
-                        </LinearGradient>
+                            children={<NoData type={'Collections'} />}
+                        />
                 }
             </View>
         </View>

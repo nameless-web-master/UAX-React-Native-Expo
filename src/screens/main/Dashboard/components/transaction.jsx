@@ -1,26 +1,18 @@
 import React from "react";
 
 import { View, Text, Image } from 'react-native';
-import { GlobalStyles } from "../styles";
+import { GlobalStyles } from "../../../../components/styles";
 import { LinearGradient } from "expo-linear-gradient";
 
-import Icon from '../../assets/icon.png';
+import Icon from '../../../../assets/icon.png';
 
-import { WelcomeTxt } from "./WelcomeTxt";
+import { WelcomeTxt } from "../../../../components/layout/WelcomeTxt";
+import { Linear } from "../../../../components/common/linear";
 
 export const Transaction = ({ navigation }) => {
     return (
-        <LinearGradient
-            colors={['#2C2430', '#221826']}
-            style={{
-                marginVertical: 4,
-                padding: 17,
-                borderRadius: 12,
-                borderWidth: 1,
-                borderColor: '#FFFFFF12'
-            }}
-        >
-            <View>
+        <Linear
+            children={<View>
                 <View>
                     <View style={{ ...GlobalStyles.flexBetween }}>
                         <View style={{ ...GlobalStyles.flexCenter }}>
@@ -52,7 +44,15 @@ export const Transaction = ({ navigation }) => {
                         </View>
                     </View>
                 </View>
-            </View>
-        </LinearGradient>
+            </View>}
+            colors={['#2C2430', '#221826']}
+            style={{
+                marginVertical: 4,
+                padding: 17,
+                borderRadius: 12,
+                borderWidth: 1,
+                borderColor: '#FFFFFF12'
+            }}
+        />
     )
 }
