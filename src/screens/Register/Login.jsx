@@ -1,29 +1,30 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import { Template } from '../../components/common/Template';
-import { BackBtn } from '../../components/common/Back';
-import { WelcomeWord } from '../../components/common/welcomeWord';
+import { Template } from '../../components/layout/Template';
+import { IconBtn } from '../../components/common/IconBack';
+import { WelcomeWord } from '../../components/layout/welcomeWord';
 import { Input } from '../../components/common/Input';
-import { Link } from '../../components/common/link';
-import { WelcomeBtn } from '../../components/common/WelcomeBtn';
+import { Link } from '../../components/layout/link';
+import { WelcomeBtn } from '../../components/layout/WelcomeBtn';
 import { GlobalStyles } from '../../components/styles';
 
 export const Login = ({ navigation }) => {
     return (
         <Template>
-            <BackBtn navigation={navigation} path="Home" />
+            <IconBtn navigation={navigation} path="Home" icon={"keyboard-arrow-left"} />
             <WelcomeWord first="Welcome" second="Back!" />
 
             <Input placeholder="Enter email" icons={{ front: 'email' }} type="text" />
             <Input placeholder="Enter password" icons={{ front: 'lock' }} type="password" />
 
-            <Link
-                navigation={navigation}
-                path="Forgot"
-                text="Forgot Password?"
-                style={styles.forgotLink}
-            />
+            <View style={styles.forgotLink}>
+                <Link
+                    navigation={navigation}
+                    path="Forgot"
+                    text="Forgot Password?"
+                />
+            </View>
 
             <WelcomeBtn content="login" action="LoginAuth" navigation={navigation} />
 

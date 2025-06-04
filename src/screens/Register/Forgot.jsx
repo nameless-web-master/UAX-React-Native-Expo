@@ -1,17 +1,17 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
-import { Template } from '../../components/common/Template';
-import { BackBtn } from '../../components/common/Back';
-import { WelcomeWord } from '../../components/common/welcomeWord';
+import { Template } from '../../components/layout/Template';
+import { IconBtn } from '../../components/common/IconBack';
+import { WelcomeWord } from '../../components/layout/welcomeWord';
 import { Input } from '../../components/common/Input';
-import { WelcomeTxt } from '../../components/common/WelcomeTxt';
-import { WelcomeBtn } from '../../components/common/WelcomeBtn';
+import { WelcomeTxt } from '../../components/layout/WelcomeTxt';
+import { WelcomeBtn } from '../../components/layout/WelcomeBtn';
 
 export const Forgot = ({ navigation }) => {
     return (
         <Template>
-            <BackBtn navigation={navigation} path="Login" />
+            <IconBtn navigation={navigation} path="Login" icon={"keyboard-arrow-left"} />
             <WelcomeWord first="Forgot" second="Password?" />
 
             <Input placeholder="Enter email" icons={{ front: 'email' }} type="text" />
