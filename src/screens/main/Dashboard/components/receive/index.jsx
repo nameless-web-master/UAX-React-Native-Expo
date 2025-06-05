@@ -8,6 +8,7 @@ import { Nav } from "../../../../../components/layout/nav";
 import { LinearMainBox } from "../../../../../components/layout/linearMainBox";
 import { Select } from "./select";
 
+import QRCode from "react-native-qrcode-svg";
 import QR from '../../../../../assets/qr.png';
 import { WelcomeTxt } from "../../../../../components/layout/WelcomeTxt";
 import { GlobalStyles } from "../../../../../components/styles";
@@ -50,7 +51,17 @@ export const Receive = ({ navigation }) => {
                             borderRadius: 16
                         }}
                     >
-                        <Image source={QR} />
+                        <View
+                            style={{
+                                backgroundColor: '#fff',
+                                padding: 4
+                            }}
+                        >
+                            <QRCode
+                                size={196}
+                                value="98A5316843664398B24BEC84FD8F990A989DF199"
+                            />
+                        </View>
                         <View style={{
                             ...GlobalStyles.flexBetween,
                             paddingVertical: 10,

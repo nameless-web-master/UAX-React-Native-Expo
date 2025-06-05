@@ -16,7 +16,7 @@ import uaxn from '../../../assets/balance/uax.png';
 import usdt from '../../../assets/balance/usdt.png';
 import { Select } from "./components/select";
 import { InputView } from "./components/inputView";
-import { IconBtn } from "../../../components/common/IconBack";
+import { IconBtn } from "../../../components/common/IconBtn";
 import { LinearMainBox } from "../../../components/layout/linearMainBox";
 import { MainBtn } from "../../../components/layout/mainBtn";
 

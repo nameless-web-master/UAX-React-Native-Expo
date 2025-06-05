@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Image, Text } from "react-native";
 
-import { IconBtn } from "../common/IconBack";
+import { IconBtn } from "../common/IconBtn";
 import { GlobalStyles } from "../styles";
 
 import profile from '../../assets/profile.png';

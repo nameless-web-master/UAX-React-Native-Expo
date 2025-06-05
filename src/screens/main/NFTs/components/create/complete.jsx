@@ -3,7 +3,7 @@ import { Image, ScrollView, Text, View } from "react-native";
 
 import { LinearGradient } from "expo-linear-gradient";
 
-import { IconBtn } from '../../../../../components/common/IconBack'
+import { IconBtn } from '../../../../../components/common/IconBtn'
 import { filter } from "./filter";
 import { GlobalStyles } from "../../../../../components/styles";
 import { MainBtn } from "../../../../../components/layout/mainBtn";

@@ -2,18 +2,18 @@ import React from "react";
 import { Image, Text, View } from "react-native";
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
-import { IconBtn } from "../common/IconBack";
+import { IconBtn } from "../common/IconBtn";
 
 import { GlobalStyles } from "../styles";
 
 import Logo from "../../assets/logo.png";
 import Light from "../../assets/light.png"
 
-export const Header = ({ content, logo, right, menu, navigation }) => {
+export const Header = ({ content, logo, right, menu, navigation, path = "Dashboard", other = false }) => {
     return (
         <View style={{
             ...GlobalStyles.flexBetween,
-            marginTop: 22
+            marginTop: 42
         }}>
             {
                 logo ?
@@ -23,7 +23,7 @@ export const Header = ({ content, logo, right, menu, navigation }) => {
                         style={{ width: 50, height: 14 }}
                     /> :
                     <IconBtn
-                        path={'Dashboard'}
+                        path={path}
                         navigation={navigation}
                         icon={"keyboard-arrow-left"}
                     />
@@ -62,6 +62,20 @@ export const Header = ({ content, logo, right, menu, navigation }) => {
                             size={24}
                             color="#fff"
                         />
+                }
+                {
+                    other ?
+                        <Text
+                            style={{
+                                color: '#DF16FF',
+                                fontSize: 14,
+                                marginLeft: 4,
+                                marginRight: 12,
+                            }}
+                        >
+                            Redeem
+                        </Text> :
+                        <></>
                 }
             </View>
         </View>

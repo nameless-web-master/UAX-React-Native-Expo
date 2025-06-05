@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { Template } from '../../components/layout/Template';
-import { IconBtn } from '../../components/common/IconBack';
+import { IconBtn } from '../../components/common/IconBtn';
 import { WelcomeWord } from '../../components/layout/welcomeWord';
 import { Input } from '../../components/common/Input';
 import { Link } from '../../components/layout/link';

@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
         top: 0,
         left: 0,
         right: 0,
+        width: '100%'
         // The height will be determined by the image's aspect ratio and the width
         // or you can specify a height if needed
     },
@@ -46,6 +47,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         left: 0,
         right: 0,
+        width: '100%'
         // The height will be determined by the image's aspect ratio and the width
         // or you can specify a height if needed
     },

@@ -26,6 +26,18 @@ import { Send } from '../screens/main/Dashboard/components/send';
 import { Receive } from '../screens/main/Dashboard/components/receive';
 import { Transfer } from '../screens/main/Dashboard/components/send/Transfer';
 
+// Settings
+
+import { BasicInfor } from '../screens/main/Settings/components/screens/BasicInfor';
+import { Wallet } from '../screens/main/Settings/components/screens/wallet';
+import { Developer } from '../screens/main/Settings/components/screens/devs';
+import { FaceID } from '../screens/main/Settings/components/screens/faceID';
+import { TouchID } from '../screens/main/Settings/components/screens/touchID';
+
+import { Invite } from '../screens/main/Settings/components/screens/invite';
+import { Help } from '../screens/main/Settings/components/screens/help';
+import { AboutUs } from '../screens/main/Settings/components/screens/aboutUs';
+
 const Stack = createNativeStackNavigator();
 
 export default function Navigator() {
@@ -53,6 +65,17 @@ export default function Navigator() {
                 <Stack.Screen name="Send" component={Send} />
                 <Stack.Screen name="Receive" component={Receive} />
                 <Stack.Screen name="Transfer" component={Transfer} />
+
+                {/* settings */}
+                <Stack.Screen name="BasicInfor" component={BasicInfor} />
+                <Stack.Screen name="Wallet" component={Wallet} />
+                <Stack.Screen name="Developer" component={Developer} />
+                <Stack.Screen name="FaceID" component={FaceID} />
+                <Stack.Screen name="TouchID" component={TouchID} />
+                <Stack.Screen name="Invite" component={Invite} />
+                <Stack.Screen name="Help" component={Help} />
+                <Stack.Screen name="AboutUs" component={AboutUs} />
+
 
             </Stack.Navigator>
         </NavigationContainer>
