@@ -56,7 +56,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        padding: 20,
         borderWidth: 1,
         borderColor: '#383A46',
         padding: 4,
@@ -69,9 +68,6 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 80
     },
-    modalSelector: {
-        width: 300,
-    },
     selectStyle: {
         borderWidth: 0,
         backgroundColor: 'transparent',
@@ -83,7 +79,7 @@ const styles = StyleSheet.create({
     selectorView: {
         height: 40,
         width: '100%',
-        paddingHorizontal: 28,
+        paddingHorizontal: 34,
     },
     selectorText: {
         color: '#ffffff',

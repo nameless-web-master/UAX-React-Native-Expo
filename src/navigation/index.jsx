@@ -18,6 +18,7 @@ import { ForgotAuth } from '../screens/Register/Auth/ForgotAuth';
 import { Dashboard } from '../screens/main/Dashboard';
 import { NFTs } from '../screens/main/NFTs';
 import { Swap } from '../screens/main/Swap';
+import { Settings } from '../screens/main/Settings';
 
 // Send & Receive
 
@@ -46,7 +47,7 @@ export default function Navigator() {
                 <Stack.Screen name="Dashboard" component={Dashboard} />
                 <Stack.Screen name="NFTs" component={NFTs} />
                 <Stack.Screen name="Swap" component={Swap} />
-
+                <Stack.Screen name="Settings" component={Settings} />
 
                 {/* Send & Receive  */}
                 <Stack.Screen name="Send" component={Send} />
