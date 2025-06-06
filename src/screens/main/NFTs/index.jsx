@@ -44,11 +44,11 @@ export const NFTs = ({ navigation }) => {
 
     const children = (
         <>
+            <Header
+                content={'NFTs'}
+                navigation={navigation}
+            />
             <ScrollView>
-                <Header
-                    content={'NFTs'}
-                    navigation={navigation}
-                />
                 <UserInfo navigation={navigation} />
                 <ButtonList state={state} setState={setState} />
                 {element}

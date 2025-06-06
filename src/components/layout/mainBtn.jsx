@@ -4,7 +4,7 @@ import { Button } from "../common/button";
 
 import { GlobalStyles } from "../styles";
 
-export const MainBtn = ({ content, action, navigation, style, other }) => {
+export const MainBtn = ({ content, action, navigation, style, other, position }) => {
     return (
         <Button
             content={content}
@@ -12,6 +12,7 @@ export const MainBtn = ({ content, action, navigation, style, other }) => {
             navigation={navigation}
             style={{ borderWidth: 1, borderColor: '#7B797C', ...style }}
             other={other}
+            position={position}
         />
     );
 };

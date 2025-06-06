@@ -12,7 +12,7 @@ import nftsActive from '../../assets/nfts(1).png';
 import Swap from '../../assets/Swap.png';
 import SwapActive from '../../assets/Swap(1).png';
 import reward from '../../assets/reward.png';
-// import VectorActive from '../../assets/Vector(1).png';
+import rewardActive from '../../assets/reward(1).png';
 import Settings from '../../assets/Settings.png';
 import SettingsActive from '../../assets/Settings(1).png';
 
@@ -24,7 +24,7 @@ const images = {
     Swap,
     SwapActive,
     reward,
-    VectorActive,
+    rewardActive,
     Settings,
     SettingsActive,
 }

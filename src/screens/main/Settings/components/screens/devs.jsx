@@ -9,6 +9,7 @@ import { Template } from "../../../../../components/layout/Template";
 import { LinearMainBox } from "../../../../../components/layout/linearMainBox";
 import { MainBtn } from "../../../../../components/layout/mainBtn";
 import { WelcomeTxt } from "../../../../../components/layout/WelcomeTxt";
+import { Nav } from "../../../../../components/layout/nav";
 
 const datas = [
     'Client Id', 'dAPP Name', 'Redirect URL', 'Status'
@@ -20,13 +21,13 @@ export const Developer = ({ navigation }) => {
             padding: 16,
             paddingVertical: 0
         }}>
+            <Header
+                content={'Developer Settings'}
+                navigation={navigation}
+                path="Settings"
+                right={true}
+            />
             <ScrollView>
-                <Header
-                    content={'Developer Settings'}
-                    navigation={navigation}
-                    path="Settings"
-                    right={true}
-                />
                 <LinearMainBox
                     style={{
                         paddingVertical: 22,
@@ -127,6 +128,7 @@ export const Developer = ({ navigation }) => {
                     </View>
                 </LinearMainBox>
             </ScrollView>
+            <Nav place={'Settings'} navigation={navigation} />
         </Template>
     )
 }

@@ -18,12 +18,12 @@ import { Link } from '../../../components/layout/link';
 export const Dashboard = ({ navigation }) => {
     const children = (
         <>
+            <Header
+                content={'Dashboard'}
+                logo={true}
+                navigation={navigation}
+            />
             <ScrollView>
-                <Header
-                    content={'Dashboard'}
-                    logo={true}
-                    navigation={navigation}
-                />
                 <UserInfo navigation={navigation} />
                 <View
                     style={{ ...GlobalStyles.flexCenter, position: 'relative' }}

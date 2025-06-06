@@ -20,17 +20,16 @@ export const Receive = ({ navigation }) => {
     const [state, setState] = useState('network');
     return (
         <Template style={{
-            padding: 16,
+            padding: 0,
             paddingVertical: 0,
         }}>
-            <ScrollView
-                style={{
-                    margin: -16,
-                }}>
+            <View style={{
+                paddingHorizontal: 16
+            }}>
+                <Header content={'Receive'} right={true} navigation={navigation} />
+            </View>
+            <ScrollView>
                 <View style={{ padding: 16 }}>
-                    <View>
-                        <Header content={'Receive'} right={true} navigation={navigation} />
-                    </View>
                 </View>
                 <LinearMainBox
                     style={{

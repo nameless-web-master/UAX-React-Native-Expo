@@ -10,6 +10,7 @@ import { GlobalStyles } from "../../../../../components/styles";
 import { Input } from "../../../../../components/common/Input";
 
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import { Nav } from "../../../../../components/layout/nav";
 
 const datas = [
     {
@@ -44,13 +45,13 @@ export const BasicInfor = ({ navigation }) => {
             padding: 16,
             paddingVertical: 0
         }}>
+            <Header
+                content={'Basics Information'}
+                navigation={navigation}
+                path="Settings"
+                right={true}
+            />
             <ScrollView>
-                <Header
-                    content={'Basics Information'}
-                    navigation={navigation}
-                    path="Settings"
-                    right={true}
-                />
                 <LinearMainBox
                     style={{
                         padding: 14,
@@ -123,6 +124,7 @@ export const BasicInfor = ({ navigation }) => {
                     </View>
                 </LinearMainBox>
             </ScrollView>
+            <Nav place={'Settings'} navigation={navigation} />
         </Template>
     )
 }

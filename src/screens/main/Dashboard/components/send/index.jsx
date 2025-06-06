@@ -44,12 +44,12 @@ export const Send = ({ navigation }) => {
 
     const children = (
         <>
+            <Header
+                content={'Send'}
+                navigation={navigation}
+            />
             <ScrollView style={{ margin: - 16 }}>
                 <View style={{ padding: 16 }}>
-                    <Header
-                        content={'Send'}
-                        navigation={navigation}
-                    />
                     <View style={{
                         flexDirection: 'column',
                         alignItems: 'center'

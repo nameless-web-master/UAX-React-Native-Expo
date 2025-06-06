@@ -1,5 +1,5 @@
-import React from "react";
-import { ScrollView, Text, View } from "react-native";
+import React, { useState } from "react";
+import { ScrollView, Switch, Text, View } from "react-native";
 
 import { Template } from "../../../../../components/layout/Template";
 import { Header } from "../../../../../components/layout/header";
@@ -7,20 +7,25 @@ import { LinearMainBox } from "../../../../../components/layout/linearMainBox";
 import { GlobalStyles } from "../../../../../components/styles";
 import { MainBtn } from "../../../../../components/layout/mainBtn";
 import { WelcomeTxt } from "../../../../../components/layout/WelcomeTxt";
+import { Nav } from "../../../../../components/layout/nav";
 
 export const Wallet = ({ navigation }) => {
+
+    const [enable, setEnable] = useState(false);
+
+    const handleSwitch = () => setEnable(previousState => !previousState);
     return (
         <Template style={{
             padding: 16,
             paddingVertical: 0
         }}>
+            <Header
+                content={'Wallet Settings'}
+                navigation={navigation}
+                path="Settings"
+                right={true}
+            />
             <ScrollView>
-                <Header
-                    content={'Wallet Settings'}
-                    navigation={navigation}
-                    path="Settings"
-                    right={true}
-                />
 
                 <LinearMainBox
                     style={{
@@ -45,11 +50,13 @@ export const Wallet = ({ navigation }) => {
                                 textAlign: 'left',
                                 fontSize: 13
                             }}>2-Factor Authentication</Text>
-                            <MainBtn content={{ txt: 'Enable' }} style={{
-                                paddingHorizontal: 20,
-                                paddingVertical: 8,
-                                fontSize: 13
-                            }} />
+                            <Switch
+                                trackColor={{ false: "#767577", true: "#DF16FF" }}
+                                thumbColor="#fff"
+                                ios_backgroundColor="#3e3e3e"
+                                onValueChange={handleSwitch}
+                                value={enable}
+                            />
                         </View>
                     </View>
                     <View
@@ -115,6 +122,7 @@ export const Wallet = ({ navigation }) => {
                     />
                 </LinearMainBox>
             </ScrollView>
+            <Nav place={'Settings'} navigation={navigation} />
         </Template >
     )
 }

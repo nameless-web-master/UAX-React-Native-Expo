@@ -83,10 +83,10 @@ export const Settings = ({ navigation }) => {
             paddingVertical: 0
         }}>
             <>
+                <View style={{ marginBottom: 18 }}>
+                    <Header content={'Settings'} navigation={navigation} />
+                </View>
                 <ScrollView>
-                    <View style={{ marginBottom: 18 }}>
-                        <Header content={'Settings'} navigation={navigation} />
-                    </View>
                     {
                         datas.map((_itm, _idx) => (
                             <LinearMainBox

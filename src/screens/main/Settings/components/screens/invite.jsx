@@ -14,6 +14,7 @@ import { Header } from "../../../../../components/layout/header";
 import { GlobalStyles } from "../../../../../components/styles";
 import { WelcomeTxt } from "../../../../../components/layout/WelcomeTxt";
 import { LinearMainBox } from "../../../../../components/layout/linearMainBox";
+import { Nav } from "../../../../../components/layout/nav";
 
 const datas = [
     {
@@ -34,7 +35,6 @@ export const Invite = ({ navigation }) => {
     const [state, setState] = useState(0);
     return (
         <>
-
             <Image
                 source={back}
                 alt="back"
@@ -49,15 +49,15 @@ export const Invite = ({ navigation }) => {
                 padding: 16,
                 paddingVertical: 0
             }}>
+                <Header
+                    content={'Invite & Earn'}
+                    navigation={navigation}
+                    path="Settings"
+                    right={true}
+                    menu={true}
+                    other={true}
+                />
                 <ScrollView style={{ zIndex: 2 }}>
-                    <Header
-                        content={'Invite & Earn'}
-                        navigation={navigation}
-                        path="Settings"
-                        right={true}
-                        menu={true}
-                        other={true}
-                    />
                     <View>
                         <Text
                             style={{
@@ -107,7 +107,7 @@ export const Invite = ({ navigation }) => {
                             }}
                         >
                         </View>
-                        <View
+                        <TouchableOpacity
                             style={{
                                 ...GlobalStyles.flex,
                                 gap: 10,
@@ -116,6 +116,7 @@ export const Invite = ({ navigation }) => {
                                 backgroundColor: '#DF16FF',
                                 overflow: 'hidden', // Prevents children from overflowing
                             }}
+                            onPress={() => navigation.navigate('Referral')}
                         >
                             <Image
                                 source={star}
@@ -158,7 +159,7 @@ export const Invite = ({ navigation }) => {
                                     So far, you have 5 referrals.
                                 </Text>
                             </View>
-                        </View>
+                        </TouchableOpacity>
                     </View>
                     <View
                         style={{
@@ -321,6 +322,7 @@ export const Invite = ({ navigation }) => {
                         </View>
                     </View>
                 </ScrollView>
+                <Nav place={'Settings'} navigation={navigation} />
             </Template >
         </>
     )

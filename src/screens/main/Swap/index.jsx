@@ -34,8 +34,8 @@ export const Swap = ({ navigation }) => {
 
     const children = (
         <>
+            <Header content={'Swap'} navigation={navigation} />
             <ScrollView>
-                <Header content={'Swap'} navigation={navigation} />
                 <UserInfo navigation={navigation} />
                 <LinearMainBox
                     style={{
@@ -133,13 +133,14 @@ export const Swap = ({ navigation }) => {
                                         width: 48,
                                         height: 48,
                                         borderRadius: 16,
-                                        zIndex: 1
+                                        zIndex: 1,
+                                        backgroundColor: '#543C58'
                                     }}
                                 />
                                 <View
                                     style={{
                                         width: '100%',
-                                        height: 0.5,
+                                        height: 1,
                                         backgroundColor: '#383A46',
                                         position: 'absolute'
                                     }}
@@ -238,11 +239,16 @@ export const Swap = ({ navigation }) => {
                     >1 UAXN = 0.6752365 USDT</Text>
                     <WelcomeTxt txt={'($24,653.80)'} style={{ fontSize: 13 }} />
                 </View>
-                <MainBtn content={{ txt: 'Swap' }} style={{
-                    marginVertical: 52,
-                    backgroundColor: '#DA23F8',
-                    borderColor: 'transparent',
-                }} />
+                <MainBtn
+                    content={{ txt: 'Swap' }}
+                    style={{
+                        marginVertical: 52,
+                        backgroundColor: '#DA23F8',
+                        borderColor: 'transparent',
+                    }}
+                    action={'GetBand'}
+                    navigation={navigation}
+                />
             </ScrollView>
             <Nav navigation={navigation} place={'Swap'} />
         </>
